@@ -2,13 +2,17 @@
 const groups = [{
   title: 'String',
   place: 'Morozivka',
-},{
+}, {
   title: 'String',
   place: 'Morozivka',
-},{
+}, {
   title: 'String',
   place: 'Morozivka',
 }]
+
+const headerBadge = useHeaderBadge()
+headerBadge.value = groups.length
+
 </script>
 
 <template>

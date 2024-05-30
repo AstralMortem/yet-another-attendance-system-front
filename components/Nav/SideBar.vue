@@ -13,25 +13,27 @@ const items = [
   [{
     label: 'ben@example.com',
     slot: 'account',
-    disabled: true
-  }], [{
+    disabled: true,
+  }],
+  [{
     label: 'Settings',
-    icon: 'i-heroicons-cog-8-tooth'
-  }], [{
+    icon: 'i-heroicons-cog-8-tooth',
+  }],
+  [{
     label: 'Documentation',
-    icon: 'i-heroicons-book-open'
+    icon: 'i-heroicons-book-open',
   }, {
     label: 'Changelog',
-    icon: 'i-heroicons-megaphone'
+    icon: 'i-heroicons-megaphone',
   }, {
     label: 'Status',
-    icon: 'i-heroicons-signal'
-  }], [{
+    icon: 'i-heroicons-signal',
+  }],
+  [{
     label: 'Sign out',
-    icon: 'i-heroicons-arrow-left-on-rectangle'
-  }]
+    icon: 'i-heroicons-arrow-left-on-rectangle',
+  }],
 ]
-
 </script>
 
 <template>
@@ -48,7 +50,9 @@ const items = [
       <UDropdown :items="items">
         <div class="flex flex-row justify-evenly gap-4 p-4">
           <UAvatar src="https://avatars.githubusercontent.com/u/739984?v=4" />
-          <p class="text-xl">Vladyslav Chaliuk</p>
+          <p class="text-xl">
+            Vladyslav Chaliuk
+          </p>
         </div>
         <template #item="{ item }">
           <span class="truncate">{{ item.label }}</span>

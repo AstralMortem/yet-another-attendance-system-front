@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   title: {
     type: String,
     default: 'Screen',
@@ -8,6 +8,7 @@ const props = defineProps({
     type: Number,
   },
 })
+const links = useBreadcrumbItems()
 
 const { showCommandPanel } = useSearch()
 </script>
@@ -24,10 +25,11 @@ const { showCommandPanel } = useSearch()
       <div class="flex flex-row justify-evenly gap-2">
         <UButton icon="i-heroicons-magnifying-glass" variant="ghost" color="gray" @click="showCommandPanel = true" />
         <UIDarkMode />
+        <UILangSwitch />
       </div>
     </div>
     <div>
-      pass
+      <UBreadcrumb :links="links" />
     </div>
   </div>
 </template>

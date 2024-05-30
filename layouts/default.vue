@@ -3,11 +3,13 @@
 </script>
 
 <template>
-  <div class="w-screen h-full flex justify-center">
-    <slot />
+  <div class="flex w-screen h-screen flex-row">
+    <NavSideBar />
+    <div class="flex flex-col w-full h-full">
+      <NavSideHeader />
+      <div class="flex w-full h-full overflow-y-auto">
+        <slot />
+      </div>
+    </div>
   </div>
 </template>
-
-<style>
-
-</style>

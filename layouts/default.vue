@@ -7,9 +7,9 @@
     <NavSideBar />
     <div class="flex flex-col w-full h-full gap-4">
       <NavSideHeader />
-      <UContainer>
+      <div class="w-full px-4">
         <slot />
-      </UContainer>
+      </div>
     </div>
     <UNotifications />
   </div>
